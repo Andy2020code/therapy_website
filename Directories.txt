@@ -1,0 +1,17 @@
+Directories {
+	Read_ME_File: 'GitHub_Repositories/therapy_website/README.md'
+	Root_Directory: 'GitHub_Repositories/therapy_website'
+	Virtual_Environment_Directory: 'GitHub_Repositories/therapy_website/.venv'
+	Requirements_Directory: 'GitHub_Repositories/therapy_website/Requirements/requirements.txt'
+	Server_Directory: 'GitHub_Repositories/therapy_website/server'
+	App_N0_1_Directory: 'GitHub_Repositories/therapy_website/core'
+}
+
+
+Colors
+
+# Header-Color: #ab2836 (Red) - Why: "Passion and Desire", and "Power Tie" to representing the association of wealth and power.
+
+# Header-Text-Color: #fefae0 (Whiteish) - Why: "Joy and Beginnings", a japanese spiritual significance for purity and unity.
+
+# Section_1_Color: #ffdab9 (Skin_Tone_1) - 

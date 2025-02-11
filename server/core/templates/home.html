@@ -4,25 +4,34 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Therapy Website</title>
+	{% load static %}
+	<link rel="stylesheet" href="https://use.typekit.net/iqv1ntj.css">
 	<link rel="stylesheet" href="{% static 'CSS/home_css_01.css' %}">
 </head>
 <body>
-	<header>
-		<h1>Welcome to Our Therapy Website</h1>
-		<nav>
-			<ul>
-				<li><a href="{% url 'home' %}">Home</a></li>
-				<li><a href="{% url 'about' %}">About</a></li>
-				<li><a href="{% url 'services' %}">Services</a></li>
-				<li><a href="{% url 'contact' %}">Contact</a></li>
-			</ul>
-		</nav>
-	</header>
-	<main>
-		<section>
-			<h2>Our Mission</h2>
-			<p>We are dedicated to providing the best therapy services to help you achieve your goals.</p>
-		</section>
+	<section class="core_header">
+		<h1 class="core_header_title">Nav_Title / Logo</h1>
+
+		<ul class="core_header_nav_ul">
+			<a href="{% url 'core:home' %}">Home</a>
+			<a href="{% url 'core:link_1' %}">Link_1</a>
+			<a href="{% url 'core:link_2' %}">Link_2</a>
+			<a href="{% url 'core:link_3' %}">Link_3</a>
+			<a href="{% url 'core:link_4' %}">Link_4</a>
+		</ul>
+	</section>
+	<main class="core_main_content_wrapper">
+		<section class="section_1">
+			<div class="section_1_image_container_1">
+				<div class="circle_shape_media_bg_1"></div>
+				<img class="landing_media_1" src="{% static 'images/home/Landing_Page_Media_01.png' %}" alt="Image Description Here" srcset="">
+			</div>
+
+			<div class="section_1_text_content">
+				<h2>Therapy Services</h2>
+				<p>Our therapy services are tailored to your needs. We offer a variety of services to help you reach your goals.</p>
+			</div>
+ 		</section>
 		<section>
 			<h2>Our Services</h2>
 			<p>We offer a variety of therapy services tailored to your needs.</p>

@@ -1,0 +1,82 @@
+@font-face {
+    font-family: 'Custom_Title_Font';
+    src: url('/static/Fonts/Uncial_Antiqua/UncialAntiqua-Regular.ttf') format('truetype'),
+         url('/static/Fonts/Custom/Custom_Title_Font.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+.core_header{
+	width: 100vw;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #942b3b;
+	border-radius: 20px;
+	text-align: center;
+}
+
+.core_header_title{
+	font-family: "museo", serif;
+	font-weight: 700;
+	color: #fefae0;
+	font-size: 36px;
+	padding: 0 20px;
+}
+
+.core_header_nav_ul{
+	display: flex;
+	gap: 20px;
+}
+
+.core_header_nav_ul a{
+	font-family: "museo", serif;
+	font-weight: 300;
+	text-decoration: none;
+	color: #fefae0;
+	padding: 0 20px;
+}
+
+.core_main_content_wrapper{
+	width: 100vw;
+	height: auto;
+	display: block;
+	background-color: #ffffff;
+}
+
+.section_1{
+	width: 80vw;
+	height: 250px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #ffdab9;
+}
+
+.section_1_image_container_1{
+	position: relative;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.circle_shape_media_bg_1{
+	width: 200px;
+	height: 200px;
+	background-color: #942b3b;
+	border-radius: 50%;
+    position: absolute;
+    z-index: 0;
+}
+
+.landing_media_1{
+	width: 70%;
+	height: auto;
+    position: absolute;
+    z-index: 1;
+}
