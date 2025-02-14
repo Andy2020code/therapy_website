@@ -7,11 +7,19 @@
 }
 
 @font-face {
-    font-family: 'Helvetica_Custom';
-    src: url('/static/Fonts/Helvetica_Custom/Helvetica.woff') format('truetype'),
-         url('/static/Fonts/Helvetica_Custom/Helvetica.woff') format('woff');
+    font-family: 'Helvetica_Custom_Normal';
+    src: url('/static/Fonts/Helvetica_Custom/Helvetica.woff') format('woff')
+		;
     font-weight: normal;
     font-style: normal;
+}
+
+@font-face {
+    font-family: 'Helvetica_Custom_Italic';
+    src: url('/static/Fonts/Helvetica_Custom/Helvetica-Oblique-1.woff') format('woff')
+		;
+    font-weight: 400;
+    font-style: italic;
 }
 
 body{
@@ -216,15 +224,15 @@ body{
 	height: auto;
 	display: flex;
 	justify-content: space-around;
-	background-color: blue;
+    background: linear-gradient(220deg, rgba(231,201,174,1) 0%, rgba(137,151,136,1) 130%);
 }
 
 .section_3_review_card_1{
-	width: 300px;
-	height: 400px;
+	width: 280px;
+	height: auto;
 	display: flex;
 	flex-direction: column;
-	justify-content: space-between;
+	justify-content: center;
 	background-color: #F2F2F2;
 	border-radius: 30px;
 	margin: 20px 0;
@@ -233,7 +241,7 @@ body{
 .section_3_reviews_card_1_header{
 	width: 100%;
 	height: auto;
-	background-color: #FFFFFF;
+	background-color: #F2F2F2;
 	border-radius: 30px 30px 0px 0px;
 }
 
@@ -250,25 +258,183 @@ body{
 .section_3_reviews_card_1_description{
 	width: 100%;
 	height: auto;
-	background-color: #394F37;
+	background-color: #5A7C57;
 	border-radius: 0px 100px 0px 0px;
 }
 
-.section_3_reviews_card_1_description p{
+.section_3_review_title{
 	width: 85%;
 	height: auto;
-	font-family: "Playwrite BR", serif;
-	font-weight: 200;
-	font-style: normal;
-	line-height: 1.3;
+	font-family: 'Helvetica_Custom_Normal', sans-serif;
+	font-size: 18px;
+	color: #F2F2F2;
+	line-height: 1.2;
+	margin: 25px 0px 0px 15px;
+}
+
+.section_3_reviews_card_1_description blockquote{
+	width: 85%;
+	height: auto;
+	font-family: 'Helvetica_Custom_Normal', sans-serif;
+	font-size: 15px;
+	line-height: 1.2;
+	quotes: "“" "”" "‘" "’";
+	text-indent: 36px;
 	color: #F2F2F2;
 	text-align: left;
 	border-radius: 0px 50px 0px 0px;
-	margin: 30px auto;
+	margin: 25px 0px 0px 15px;
+	position : relative;
+}
+
+.section_3_reviews_card_1_description blockquote::before {
+	content: open-quote;
+	font-size: 30px;
+	position: absolute;
+	left: -13px;
+	top: -8px;
+}
+
+.section_3_reviews_card_1_description blockquote::after {
+	content: close-quote;
+	font-size: 30px;
+	position: absolute;
+	right: -2px;
+	bottom: -9px;
 }
 
 .section_3_reviews_card_1_footer{
 	width: 100%;
 	height: auto;
-	background-color: #F2F2F2;
+	background-color: #5A7C57;
+	display: block;
+	border-radius: 0px 0px 30px 30px;
+	margin: 0;
+	padding: 0;
 }
+
+.section_3_review_author{
+	font-family: 'Helvetica_Custom_Italic', sans-serif;
+	font-weight: 400;
+	font-size: 13px;
+	text-align: left;
+	line-height: 1.1;
+	color: #F2F2F2;
+	padding-top: 10px;
+	padding-left: 20px;
+}
+
+.section_3_review_author_name{
+	font-family: "Playwrite BR", serif;
+	font-weight: 400;
+	font-size: 15px;
+	text-align: right;
+	line-height: 1.1;
+	color: #F2F2F2;
+	padding-right: 25px;
+	padding-bottom: 10px;
+}
+
+.section_3_blog_card{
+	width: 40%;
+	height: auto;
+	background-color: #5A7C57;
+}
+
+.section_3_blog_card_header{
+	width: 100%;
+	height: auto;
+	background-color: #D9AB82;
+}
+
+.section_3_blog_card_header h2{
+	font-family: 'Helvetica_Custom_Normal', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: left;
+	line-height: 1.1;
+	color: #F2F2F2;
+	padding-left: 20px;
+	margin: 0 auto;
+}
+
+.section_3_blog_card_body{
+	width: 100%;
+	height: auto;
+	display: flex;
+	justify-content: space-between;
+	background-color: #D9AB82;
+}
+
+.blog_description_section_01{
+	width: 50%;
+	height: auto;
+	flex-direction: column;
+	background-color: #394F37;
+}
+
+.blog_description_section_01_image{
+	width: 100%;
+	height: auto;
+	background-color: white;
+	border: 1px solid red;
+}
+
+.blog_description_section_01_image img{
+	width: 50%;
+	height: auto;
+	margin: 10px 25%;
+}
+
+.blog_description_section_01_text_01{
+	width: 100%;
+	height: auto;
+	border: 1px solid red;
+}
+
+.blog_description_section_01_text_01 h2{
+	font-family: "Playwrite BR", serif;
+	font-weight: 200;
+	font-size: 15px;
+	color: #FFFFFF;
+	line-height: 1.5;
+	text-align: justify;
+	text-indent: 36px;
+	padding: 0px 5%;
+}
+
+.blog_description_section_02{
+	width: 50%;
+	height: auto;
+	flex-direction: column;
+	background-color: #5A7C57;
+}
+
+.blog_description_section_02_features{
+	width: 85%;
+	height: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #F2F2F2;
+	border-radius: 50px;
+	margin: 15px auto;
+}
+
+.blog_description_section_02_features h2::before{
+	content: '★ ';
+	color: #ffcc00;
+	font-size: 15px;
+}
+
+.blog_description_section_02_features h2{
+	font-family: 'Helvetica_Custom_Normal', sans-serif;
+	font-weight: 400;
+	font-size: 24px;
+	text-align: center;
+	line-height: 1.1;
+	color: #153840;
+}
+
+
+	
