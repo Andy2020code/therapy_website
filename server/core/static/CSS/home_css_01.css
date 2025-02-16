@@ -338,27 +338,28 @@ body{
 .section_3_blog_card{
 	width: 40%;
 	height: auto;
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
 	background-color: #5A7C57;
+}
+
+.section_3_blog_card_header_title{
+	font-family: "Playwrite BR", serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 34px;
+	line-height: 2.5;
+	color: #F2F2F2;
+	background-color: #5A7C57;
+	padding-left: 20px;
+	margin: 0 auto;
 }
 
 .section_3_blog_card_wrapper{
 	width: 100%;
 	height: auto;
+	display: flex;
+	justify-content: center;
 	background-color: #D9AB82;
-}
-
-.section_3_blog_card_header_title{
-	font-family: 'Helvetica_Custom_Normal', sans-serif;
-	font-weight: 400;
-	font-size: 24px;
-	text-align: left;
-	line-height: 1.1;
-	color: #F2F2F2;
-	padding-left: 20px;
-	margin: 0 auto;
 }
 
 .section_3_blog_card_body{
