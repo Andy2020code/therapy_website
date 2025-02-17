@@ -16,3 +16,8 @@ def link_3(request):
 
 def link_4(request):
 	return render(request, 'link_4.html')
+
+
+#Home_Page "Hmmm, I Need ..." option links
+def i_need_option_01(request):
+	return render(request, 'i_need_option_01.html')
