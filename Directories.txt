@@ -15,3 +15,6 @@ Colors
 # Header-Text-Color: #fefae0 (Whiteish) - Why: "Joy and Beginnings", a japanese spiritual significance for purity and unity.
 
 # Section_1_Color: #ffdab9 (Skin_Tone_1) - 
+
+
+1hr + 1 + 1 + 1 + 1 + 1 + .5 + 2
