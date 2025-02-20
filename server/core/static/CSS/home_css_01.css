@@ -66,6 +66,7 @@
 	--features_body_background_color: #5E7778 linear-gradient(to right, rgba(94,119,120,1) -35%, rgba(206,152,129,1), rgba(94,119,120,1) 135%);
 
 	--section_5_card_body_background_color: radial-gradient(circle at 33% 19%, rgba(147,156,166,1) 20%, rgba(61,77,95,1) 80%);
+	--section_5_social_media_platform_button_background_color: radial-gradient(circle at 50% 50%, rgba(195,205,190,1) 20%, rgba(94,119,120,1) 75%);
 	--buttons_color_01: #F6E4C8;
 	--buttons_color_02: #C6CFC0;
 	--buttons_color_03: #283A4E;
@@ -561,9 +562,10 @@ body{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background: linear-gradient(130deg, rgba(164,163,131,1) 20%, rgba(87,96,75,1) 80%);
+	background: inherit;
+	border: 1px solid red;
 	border-radius: 10px;
-	margin: 10% 10px;
+	margin: auto 10px;
 }
 
 .section_5_social_media_platform_image{
@@ -581,13 +583,15 @@ body{
 
 .section_5_social_media_platform_content{
 	width: 100%;
-	height: 78%;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
 }
 
 .section_5_social_media_platform_title{
+	width: 100%;
+	height: auto;
 	font-family: 'Helvetica_Custom_Italic', sans-serif;
 	font-weight: 400;
 	font-size: 17px;
@@ -596,18 +600,23 @@ body{
 }
 
 .section_5_card_button_01{
-	width: 60px;
-	height: 60px;
-	background-color:var(--buttons_color_01) ;
-	border: none;
+	width: 50px;
+	height: 50px;
+	border: 1.2px solid var(--text_color_02);
+	background: var(--section_5_social_media_platform_button_background_color);
 	border-radius: 50%;
-	margin: 30px 30px;
+	margin: 0 auto;
 }
 
 .section_5_card_button_01 a{
-	text-decoration: none;
-	color: var(--text_color_01);
-	font-size: 15px;
+	width: 100%;
+	font-size: 0px;
+}
+
+.section_5_card_button_01 i{
+	color: var(--text_color_02);
+	font-size: 13px;
+	font-weight: 800;
 }
 
 .section_6{
@@ -912,8 +921,9 @@ body{
 	}
 	
 	.section_5_card_button_01{
-		width: 50px;
-		height: 50px;
+		width: 35px;
+		height: 35px;
+		margin: 0px auto 23% auto;
 	}
 	
 	.section_5_card_button_01 a{
