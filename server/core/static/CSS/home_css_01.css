@@ -945,8 +945,10 @@ body{
 	}
 	
 	.section_5_social_media_platform_title{
-		padding: 0;
-		margin: 0;
+		background: var(--features_body_background_color);
+		border: 1px solid var(--button_border_color_01);
+		padding: 1px 8px;
+		margin: 10% auto 0 auto;
 	}
 	
 	.section_5_card_button_01{
