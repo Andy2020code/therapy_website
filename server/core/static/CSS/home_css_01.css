@@ -48,6 +48,9 @@
 	--text_color_02: #283A4E;
 	--text_color_03: #F6E4C8;
 	--text_color_04: #CD915B;
+	--text_color_05: #f26a4f;
+	--text_color_06: #c3cdbe;
+	--text_color_07: #fedfd4;
 	--section_1_body_background_color: linear-gradient(140deg, rgba(195,205,190,1) -15%, rgba(94,119,120,1) 60%);
 	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(186,109,76,1) 90%);
 	--section_3_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) -5%, rgba(186,109,76,1) 75%);
@@ -67,10 +70,10 @@
 	--features_body_background_color: #5E7778 linear-gradient(to right, rgba(94,119,120,1) -35%, rgba(206,152,129,1), rgba(94,119,120,1) 135%);
 
 	--section_5_card_body_background_color: radial-gradient(circle at 33% 19%, rgba(147,156,166,1) 20%, rgba(254,223,212,1) 80%);
-	--section_5_social_media_platform_button_background_color: radial-gradient(circle at 50% 50%, rgba(94,119,120,1) -20%, rgba(147,156,166,1) 55%);
 	--section_5_options_social_media_card_background_color: linear-gradient(to right, rgba(192,214,223,1) -5%, rgba(254,223,212,1) 80%, rgba(192,214,223,1) 130%);
-	--section_5_social_media_name_background_color: linear-gradient(to right, rgba(94,119,120,1) -35%, rgba(254,223,212,1), rgba(94,119,120,1) 135%);
-	--section_5_social_media_title_devider_color: linear-gradient(to right, rgba(90,124,87,1) -35%, rgba(205,145,91,1), rgba(90,124,87,1) 135%);
+	--section_5_social_media_name_devider_color: #f26a4f;
+	--section_5_social_media_name_background_color: radial-gradient(circle at 35% 250%, rgba(242,148,121,1) -5%, rgba(192,214,223,1) 75%);
+	--section_5_social_media_buttons_background_color: radial-gradient(circle at 35% 150%, rgba(242,148,121,1) -5%, rgba(192,214,223,1) 75%);
 
 
 	--section_6_options_card_background_color: linear-gradient(to right, rgba(94,119,120,1) -35%, rgba(206,152,129,1), rgba(94,119,120,1) 135%);
@@ -82,7 +85,7 @@
 	--right_arrow_icon_color_01: #F6E4C8;
 	--right_arrow_icon_color_02: #283A4E;
 
-	--button_border_color_01: #F6E4C8;
+	--border_color_01: #f26a4f;
 }
 
 body{
@@ -588,7 +591,8 @@ body{
 .section_5_social_media_platform_image img{
 	width: 60%;
 	height: auto;
-	background-color: var(--text_color_01);
+	background: var(--text_color_01);
+	border: 1px solid var(--border_color_01);
 	border-radius: 12px;
 	margin: 20% 20%;
 }
@@ -603,27 +607,30 @@ body{
 
 .social_media_platform_title_wrapper{
 	width: 100%;
-	height: 35px;
-	background: var(--buttons_color_03);
+	height: auto;
+	background: var(--section_5_social_media_name_background_color);
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
 }
 
 .social_media_title_devider{
 	width: 100%;
-	height: 2px;
-	background: var(--section_5_social_media_title_devider_color);
+	height: 1px;
+	background: var(--section_5_social_media_name_devider_color);
+	border-radius: 10%;
 }
 
 .section_5_social_media_platform_title{
 	width: 100%;
-	height: 35px;
+	height: auto;
 	font-family: 'Helvetica_Custom_Normal', sans-serif;
 	font-weight: 400;
 	font-size: 17px;
 	text-align: center;
-	color: var(--text_color_03);
+	color: #7e8d85;
+	padding: 0;
+	margin: 3px 0px 3px 0px;
 }
 
 .section_5_card_button_01{
@@ -632,7 +639,7 @@ body{
 	display: grid;
 	place-items: center;
 	border: 1.2px solid var(--button_border_color_01);
-	background: var(--section_5_social_media_platform_button_background_color);
+	background: var(--section_5_social_media_buttons_background_color);
 	border-radius: 50%;
 	margin: 0px auto 23% auto;
 }
