@@ -162,7 +162,7 @@
 
 
 :root {
-	--navigation_color: #2E4559;
+	--navigation_color: #5e7778;
 	--body_color: #f4f4f4;
 	--primary_color_01: #F6E4C8;
 	--secondary_color: #ff6b6b;
@@ -171,12 +171,12 @@
 	--text_color_02: #283A4E;
 	--text_color_03: #F6E4C8;
 	--text_color_04: #CD915B;
-	--text_color_05: #f26a4f;
+	--text_color_05: #c25a46;
 	--text_color_06: #c3cdbe;
 	--text_color_07: #fedfd4;
 	--text_color_08: #7e8d85;
-	--section_1_body_background_color: linear-gradient(140deg, rgba(195,205,190,1) -15%, rgba(94,119,120,1) 60%);
-	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(186,109,76,1) 90%);
+	--section_1_body_background_color: linear-gradient(140deg, rgba(217,229,214,1) -15%, rgba(94,119,120,1) 60%);
+	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(247, 160, 114,1) 90%);
 	--section_3_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) -5%, rgba(186,109,76,1) 75%);
 
 	--section_3_reviews_card_background_color: linear-gradient(65deg, rgba(94,119,120,1) 25%, rgba(195,205,190,1) 75%);
@@ -213,15 +213,20 @@
 	--footer_section_04_background: #F6E4C8;
 	--copyright_section_background: #283A4E;
 
-	--buttons_color_01: #F6E4C8;
-	--buttons_color_02: #C6CFC0;
-	--buttons_color_03: #283A4E;
+	--border_color_01: #c25a46;
+	--border_color_02: #f2f2f2;
+
+	--buttons_color_01: transparent;
+	--buttons_color_02: transparent;
+	--buttons_color_03: transparent;
+	--buttons_color_04: transparent;
+	--buttons_color_05: linear-gradient(150deg, transparent, rgba(247, 160, 114,0.7) 50%, transparent);
 
 	--redirect_right_arrow_icon_color_01: #f26a4f;
 	--right_arrow_icon_color_01: #f26a4f;
 	--right_arrow_icon_color_02: #283A4E;
 
-	--border_color_01: #f26a4f;
+
 }
 
 body{
@@ -287,6 +292,16 @@ body{
 	width: 90%;
 	height: auto;
 	margin: 0 auto;
+	place-items: center;
+}
+
+.section_1_text_content_title_wrapper{
+	width: 80%;
+	height: auto;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	margin: 20px 0px 0px 0px;
 }
 
 .section_1_text_content_title_1{
@@ -294,10 +309,25 @@ body{
 	font-optical-sizing: auto;
 	font-weight: 400;
 	font-style: normal;
-	font-size: 65px;
+	font-size: 45px;
 	color: var(--text_color_01);
-	text-align: center;
-	margin: 50px 0px 0px 0px;
+}
+
+.section_1_text_content_title_devider{
+	width: 5px;
+	height: 100px;
+	background: var(--border_color_01);
+	border-radius: 10px;
+}
+
+.section_1_text_content_title_2{
+	font-family: "Anton SC", serif;
+	font-weight: 100;
+	letter-spacing: 1px;
+	line-height: 0px;
+	font-size: 55px;
+	color: var(--text_color_01);
+
 }
 
 .section_1_text_content_description_1{
@@ -312,11 +342,53 @@ body{
 }
 
 .section_1_text_content_2{
-    width: 320px;
-    height: 50px;
-	background: var(--buttons_color_01);
+    width: 350px;
+    height: 70px;
+	background: var(--buttons_color_05);
+	place-content: center;
+	border: 1px solid var(--border_color_02);
 	border-radius: 5px;
-	margin: 40px auto;
+	margin: 30px auto;
+	position: relative;
+}
+
+.section_1_flowers_1_svg{
+	position: absolute;
+	width: 70px;
+	height: auto;
+	bottom: 30px;
+	right: 90%;
+}
+
+.section_1_flowers_2_svg{
+	position: absolute;
+	width: 50px;
+	height: auto;
+	transform: rotate(40deg);
+	transform-origin: center;
+	transition: transform 1s ease-in-out;
+	top: 30px;
+	right: 95%;
+}
+
+.Base_Petal{
+	fill: #c25a46;
+}
+
+.Pink_Base_Circle{
+	fill: #F17894;
+}
+
+.Yellow_Base_Circle{
+	fill: #FAE264;
+}
+
+.Stick{
+	fill: #F59BAE;
+}
+
+.Outside_Circle{
+	fill: #F6B0C9;
 }
 
 .section_1_text_content_description_2{
@@ -325,7 +397,7 @@ body{
 	font-weight: 200;
 	font-style: normal;
 	font-size: 15px;
-	color: var(--text_color_02);
+	color: var(--text_color_01);
 	text-align: center;
 	padding: 7px 0px;
 }
@@ -345,28 +417,28 @@ body{
 	font-weight: 100;
 	letter-spacing: 1px;
 	border-radius: 6px;
-	border: none;
+	border: 1px solid var(--border_color_02);
 	margin: 20px 0;
 }
 
 .button_01_section_1{
-	color: var(--text_color_01);
-	background: var(--buttons_color_03);
+	color: var(--text_color_03);
+	background: var(--buttons_color_01);
 }
 
 .button_02_section_1{
-	color: var(--text_color_02);
+	color: var(--text_color_03);
 	background: var(--buttons_color_02);
 }
 
 .button_03_section_1{
-	color: var(--text_color_02);
-	background: var(--buttons_color_02);
+	color: var(--text_color_03);
+	background: var(--buttons_color_03);
 }
 
 .button_04_section_1{
-	color: var(--text_color_01);
-	background: var(--buttons_color_03);
+	color: var(--text_color_03);
+	background: var(--buttons_color_04);
 }
 
 .section_2{
