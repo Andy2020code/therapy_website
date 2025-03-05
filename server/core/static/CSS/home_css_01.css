@@ -163,6 +163,7 @@
 
 :root {
 	--navigation_color: #5e7778;
+	--navigation_devider_color: #EEDACA;
 	--body_color: #f4f4f4;
 	--primary_color_01: #F6E4C8;
 	--secondary_color: #ff6b6b;
@@ -177,6 +178,7 @@
 	--text_color_08: #7e8d85;
 	--section_1_body_background_color: linear-gradient(140deg, rgba(217,229,214,1) -15%, rgba(94,119,120,1) 60%);
 	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(247, 160, 114,1) 90%);
+	--section_2_overlay_title_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(194, 90, 70,1) 90%);
 	--section_3_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) -5%, rgba(186,109,76,1) 75%);
 
 	--section_3_reviews_card_background_color: linear-gradient(65deg, rgba(94,119,120,1) 25%, rgba(195,205,190,1) 75%);
@@ -220,7 +222,7 @@
 	--buttons_color_02: transparent;
 	--buttons_color_03: transparent;
 	--buttons_color_04: transparent;
-	--buttons_color_05: linear-gradient(150deg, transparent, rgba(247, 160, 114,0.7) 50%, transparent);
+	--buttons_color_05: linear-gradient(150deg, transparent, rgba(246, 228, 200,0.7) 50%, transparent);
 
 	--redirect_right_arrow_icon_color_01: #f26a4f;
 	--right_arrow_icon_color_01: #f26a4f;
@@ -270,7 +272,7 @@ body{
 .line_devider{
 	width: 100%;
 	height: 6px;
-	background-color: #F2D0A7;
+	background: var(--navigation_devider_color);
 }
 
 .core_main_content_wrapper{
@@ -346,7 +348,7 @@ body{
     height: 70px;
 	background: var(--buttons_color_05);
 	place-content: center;
-	border: 1px solid var(--border_color_02);
+	border: 1px solid var(--border_color_01);
 	border-radius: 5px;
 	margin: 30px auto;
 	position: relative;
@@ -366,7 +368,6 @@ body{
 	height: auto;
 	transform: rotate(40deg);
 	transform-origin: center;
-	transition: transform 1s ease-in-out;
 	top: 30px;
 	right: 95%;
 }
@@ -389,6 +390,36 @@ body{
 
 .Outside_Circle{
 	fill: #F6B0C9;
+}
+
+.section_1_flowers_3_svg{
+	position: absolute;
+	width: 60px;
+	height: auto;
+	transform: rotate(40deg);
+	transform-origin: center;
+	top: 30px;
+	left: 92%;
+}
+
+.Petal_Color_03{
+	fill: #C0BCDD;
+}
+
+.Petal_Shadow_03{
+	fill: #ABA7D3;
+}
+
+.Stick_03{
+	fill: #958EC4;
+}
+
+.Darker_Circle{
+	fill: #6156A5;
+}
+
+.Lighter_Circle{
+	fill: #6B61AB;
 }
 
 .section_1_text_content_description_2{
@@ -453,6 +484,7 @@ body{
 	width: 100%;
 	height: auto;
 	display: flex;
+	justify-content: space-between;
 	background-image: url('/static/images/home/section_2_media_1.png');
 	background-size: contain;
 	background-repeat: no-repeat;
@@ -465,10 +497,11 @@ body{
 	text-orientation:upright;
 	font-family: "Anton SC", serif;
 	font-weight: 200;
-	margin: 0px 0px 0px 0px;
-	padding-right: 0;
-	font-size: 95px;
+	font-size: 55px;
+	background: var(--text_color_05);
 	color: var(--text_color_03);
+	margin: 0px 0px 0px 0px;
+	padding: 0;
 }
 
 .section_2_text_content_description_2{
@@ -480,7 +513,7 @@ body{
 	text-align: justify;
 	text-indent: 60px;
 	color: var(--text_color_01);
-	padding-top: 15px;
+	margin: 15px auto 0px auto;
 }
 
 .section_3{
@@ -507,7 +540,7 @@ body{
 	justify-content: center;
 	background: var(--section_3_reviews_card_background_color);
 	border-radius: 30px;
-	margin: 20px 0;
+	margin: 30px 0;
 }
 
 .section_3_reviews_card_1_header{
@@ -532,36 +565,44 @@ body{
 	height: auto;
 	background: var(--section_3_reviews_card_1_description_background_color_01);
 	border-radius: 0px 100px 0px 0px;
+	display: flex;
+	flex-direction: column;
+
 }
 
 .section_3_review_title{
 	width: 85%;
 	height: auto;
 	font-family: 'Helvetica_Custom_Normal', sans-serif;
-	font-size: 18px;
+	font-size: 22px;
 	color: var(--text_color_03);
 	line-height: 1.2;
-	margin: 25px 0px 0px 15px;
+	margin: 30px 0px 0px 20px;
 }
 
 .section_3_reviews_card_1_description blockquote{
 	width: 85%;
-	height: auto;
+	height: 130px;
+	quotes: "“" "”";
+	text-indent: 26px;
 	font-family: 'Helvetica_Custom_Normal', sans-serif;
 	font-size: 15px;
 	line-height: 1.2;
-	quotes: "“" "”" "‘" "’";
-	text-indent: 36px;
+	text-align: justify;
 	color: var(--text_color_01);
-	text-align: left;
-	border-radius: 0px 50px 0px 0px;
-	margin: 25px 0px 0px 15px;
-	position : relative;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding-right: 10px;
+	padding-bottom: 20px;
+	box-sizing: content-box;
+	margin: 20px auto 0px auto;
+	position: relative;
 }
 
 .section_3_reviews_card_1_description blockquote::before {
 	content: open-quote;
 	font-size: 30px;
+	line-height: 1.3;
 	position: absolute;
 	left: -13px;
 	top: -8px;
@@ -570,9 +611,35 @@ body{
 .section_3_reviews_card_1_description blockquote::after {
 	content: close-quote;
 	font-size: 30px;
-	position: absolute;
-	right: -2px;
-	bottom: -9px;
+	display: inline;
+	vertical-align: text-bottom;
+	line-height: 0;
+	margin-left: 1px;
+}
+
+.section_3_reviews_card_1_description blockquote::-webkit-scrollbar {
+	width: 10px;
+}
+
+.section_3_reviews_card_1_description blockquote::-webkit-scrollbar-track {
+	background: #283A4E; 
+	border-radius: 5px;
+}
+
+.section_3_reviews_card_1_description blockquote::-webkit-scrollbar-thumb {
+	background: #c25a46;
+	border-radius: 5px;
+}
+
+.section_3_reviews_card_1_description blockquote::-webkit-scrollbar-thumb:hover {
+	background: #C6CFC0; 
+}
+
+.section_3_review_card_1_devider{
+	width: 100%;
+	height: 5px;
+	background: var(--border_color_01);
+	margin: 20px 0px;
 }
 
 .section_3_reviews_card_1_footer{
