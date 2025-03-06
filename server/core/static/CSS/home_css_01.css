@@ -573,7 +573,8 @@ body{
 .section_3_review_title{
 	width: 85%;
 	height: auto;
-	font-family: 'Helvetica_Custom_Normal', sans-serif;
+	font-family: "Anton SC", serif;
+	font-weight: 100;
 	font-size: 22px;
 	color: var(--text_color_03);
 	line-height: 1.2;
@@ -590,13 +591,20 @@ body{
 	line-height: 1.2;
 	text-align: justify;
 	color: var(--text_color_01);
-	overflow-y: scroll;
+	overflow-y: auto;
 	overflow-x: hidden;
 	padding-right: 10px;
 	padding-bottom: 20px;
 	box-sizing: content-box;
 	margin: 20px auto 0px auto;
 	position: relative;
+
+	mask-image: linear-gradient(to top, transparent 100%, black 70%);
+	-webkit-mask-image: linear-gradient(to top, transparent 100%, black 70%);
+
+	mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+	-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+
 }
 
 .section_3_reviews_card_1_description blockquote::before {
@@ -618,7 +626,7 @@ body{
 }
 
 .section_3_reviews_card_1_description blockquote::-webkit-scrollbar {
-	width: 10px;
+	width: 8px;
 }
 
 .section_3_reviews_card_1_description blockquote::-webkit-scrollbar-track {
@@ -635,13 +643,6 @@ body{
 	background: #C6CFC0; 
 }
 
-.section_3_review_card_1_devider{
-	width: 100%;
-	height: 5px;
-	background: var(--border_color_01);
-	margin: 20px 0px;
-}
-
 .section_3_reviews_card_1_footer{
 	width: 100%;
 	height: auto;
@@ -652,26 +653,33 @@ body{
 	padding: 0;
 }
 
+.section_3_review_card_1_devider{
+	width: 87%;
+	height: 5px;
+	background: var(--border_color_01);
+	border-radius: 10px;
+	margin: 15px auto 0px auto;
+}
+
 .section_3_review_author{
 	font-family: 'Helvetica_Custom_Italic', sans-serif;
 	font-weight: 400;
 	font-size: 13px;
-	text-align: left;
+	text-align: right;
 	line-height: 1.1;
 	color: var(--text_color_01);
-	padding-top: 10px;
-	padding-left: 20px;
+	margin-top: 5px;
+	margin-right: 20px;
 }
 
 .section_3_review_author_name{
-	width: 50%;
-	display: inline-block;
 	font-family: "Playwrite BR", serif;
 	font-weight: 400;
 	font-size: 15px;
-	text-align: center;
+	text-align: right;
+	line-height: 0.5;
 	color: var(--text_color_01);
-	margin: 10px 0px 15px 43%;
+	margin: 0px 20px 25px 0px;
 }
 
 .section_4{
