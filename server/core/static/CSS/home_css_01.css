@@ -180,7 +180,10 @@
 	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(247, 160, 114,1) 90%);
 	--section_2_overlay_title_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(194, 90, 70,1) 90%);
 	--section_3_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) -5%, rgba(186,109,76,1) 75%);
+	--reviews_intro_title_bg_color: linear-gradient(170deg, rgba(246,228,200,1) -35%, rgba(186,109,76,1) 155%);
 
+
+	--reviews_intro_devider_color_01: #c25a46;
 	--section_3_reviews_card_background_color: linear-gradient(65deg, rgba(94,119,120,1) 25%, rgba(195,205,190,1) 75%);
 	--section_3_reviews_card_profile_background_color: linear-gradient(55deg, rgba(94,119,120,1) 5%, rgba(195,205,190,1) 55%);
 	--section_3_reviews_card_1_devider: #F6E4C8;
@@ -525,11 +528,10 @@ body{
 }
 
 .section_3_reviews_container{
-	width: 100%;
+	width: 60%;
 	height: auto;
 	display: flex;
 	justify-content: space-around;
-    background: var(--section_3_body_background_color);
 }
 
 .section_3_review_card_1{
@@ -567,7 +569,6 @@ body{
 	border-radius: 0px 100px 0px 0px;
 	display: flex;
 	flex-direction: column;
-
 }
 
 .section_3_review_title{
@@ -604,7 +605,6 @@ body{
 
 	mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
 	-webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
-
 }
 
 .section_3_reviews_card_1_description blockquote::before {
@@ -680,6 +680,35 @@ body{
 	line-height: 0.5;
 	color: var(--text_color_01);
 	margin: 0px 20px 25px 0px;
+}
+
+.reviews_intro_wrapper{
+	width: 40%;
+	height: auto;
+	border: 0px solid red;
+}
+
+.reviews_intro_title{
+	width: max-content;
+	background: var(--reviews_intro_title_bg_color);
+	font-family: "Playwrite BR", serif;
+	font-optical-sizing: auto;
+	font-weight: 300;
+	font-style: normal;
+	font-size: 32px;
+	color: var(--text_color_03);
+	line-height: 1.2;
+	padding: 15px;
+    border: 5px solid var(--border_color_01);
+    border-width: 0 4px 4px 0;
+	border-radius: 12px;
+}
+
+.reviews_intro_devider{
+	width: 83.5%;
+	height: 5px;
+	background: var(--reviews_intro_devider_color_01);
+	border-radius: 10px;
 }
 
 .section_4{
