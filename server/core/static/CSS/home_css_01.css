@@ -179,16 +179,16 @@
 	--section_1_body_background_color: linear-gradient(140deg, rgba(217,229,214,1) -15%, rgba(94,119,120,1) 60%);
 	--section_2_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(247, 160, 114,1) 90%);
 	--section_2_overlay_title_background_color: linear-gradient(320deg, rgba(246,228,200,1) 10%, rgba(194, 90, 70,1) 90%);
+	
+	
 	--section_3_body_background_color: linear-gradient(320deg, rgba(246,228,200,1) -5%, rgba(186,109,76,1) 75%);
 	--reviews_intro_title_bg_color: linear-gradient(170deg, rgba(246,228,200,1) -35%, rgba(186,109,76,1) 155%);
-
-
-	--reviews_intro_devider_color_01: #c25a46;
+	--reviews_intro_devider_color_01: #F6E4C8;
 	--section_3_reviews_card_background_color: linear-gradient(65deg, rgba(94,119,120,1) 25%, rgba(195,205,190,1) 75%);
 	--section_3_reviews_card_profile_background_color: linear-gradient(55deg, rgba(94,119,120,1) 5%, rgba(195,205,190,1) 55%);
-	--section_3_reviews_card_1_devider: #F6E4C8;
 	--section_3_reviews_card_1_description_background_color_01: linear-gradient(55deg, rgba(192,123,93,1) 35%, rgba(246,228,200,1) 140%);
 	--section_3_reviews_card_1_description_background_color_02: linear-gradient(40deg, rgba(192,123,93,1) 70%, rgba(246,228,200,1) 160%);
+	--section_3_title_background_color_01: #c25a46;
 
 	--section_4_body_background_color: linear-gradient(130deg, rgba(94,119,120,1) 1%, rgba(195,205,190,1) 45%);
 	--features_body_background_color:  linear-gradient(to right, rgba(192,214,223,1) 15%, rgba(254,223,212,1), rgba(192,214,223,1) 95%);
@@ -220,6 +220,12 @@
 
 	--border_color_01: #c25a46;
 	--border_color_02: #f2f2f2;
+
+	--deviders_background_color_01: #c25a46;
+	--deviders_background_color_02: #fefae0;
+
+	--bulletpints_color_01: #c25a46;
+	--bulletpints_color_02: #fefae0;
 
 	--buttons_color_01: transparent;
 	--buttons_color_02: transparent;
@@ -688,27 +694,89 @@ body{
 	border: 0px solid red;
 }
 
-.reviews_intro_title{
-	width: max-content;
-	background: var(--reviews_intro_title_bg_color);
-	font-family: "Playwrite BR", serif;
-	font-optical-sizing: auto;
-	font-weight: 300;
-	font-style: normal;
-	font-size: 32px;
-	color: var(--text_color_03);
-	line-height: 1.2;
-	padding: 15px;
-    border: 5px solid var(--border_color_01);
-    border-width: 0 4px 4px 0;
-	border-radius: 12px;
+.titles_intro_wrapper{
+	width: 100%;
+	height: max-content;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-.reviews_intro_devider{
-	width: 83.5%;
-	height: 5px;
+.reviews_intro_title{
+	width: max-content;
+	background: var(--section_3_title_background_color_01);
+	font-family: 'Helvetica_Custom_Italic', sans-serif;
+	font-weight: 200;
+	font-size: 32px;
+	color: var(--text_color_01);
+	line-height: 1.8;
+	padding: 5px 20px 0px 20px;
+	border-radius: 15px 0px 0px 15px;
+}
+
+.reviews_intro_titles_devider{
+	width: 5px;
+	height: 63px;
 	background: var(--reviews_intro_devider_color_01);
+}
+
+.reviews_intro_title_02{
+	width: max-content;
+	background: var(--section_3_title_background_color_01);
+	font-family: 'Helvetica_Custom_Italic', sans-serif;
+	font-weight: 600;
+	font-size: 32px;
+	color: var(--text_color_01);
+	line-height: 1.8;
+	padding: 5px 20px 0px 20px;
+	border-radius: 0px 15px 15px 0px;
+}
+
+.trusted_by_list_01 {
+    width: 57%;
+    height: auto;
+    list-style: none;
+    margin: 0 auto;
+    padding-left: 0;
+}
+
+.trusted_by_list_01 li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    font-family: 'Helvetica_Custom_Italic', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+	color: var(--text_color_01);
+    text-align: right;
+    padding-left: 0;
+}
+
+.trusted_by_list_01 li::before {
+    content: "•";
+    color: var(--bulletpints_color_02);
+    font-size: 20px;
+    margin-left: 1px;
+    flex-shrink: 0;
+}
+
+.list_devider_01{
+	width: 65%;
+	height: 1px;
+	background: var(--deviders_background_color_01);
 	border-radius: 10px;
+	margin-left: auto;
+}
+
+.section_3_artwork_01_svg{
+	width: 200px;
+	height: 200px;
+	margin: 50px auto;
+}
+
+.base_circle_shadow{
+	fill: var(--section_01_body_background_color);
 }
 
 .section_4{
@@ -1435,6 +1503,11 @@ footer{
 
 	.section_2_text_content_description_2{
 		width: 73%;
+	}
+
+	.trusted_by_list_01 {
+		margin: 0px 50px 0px auto;
+		padding-left: 0;
 	}
 
 	.blog_section_4_description_section_02_text_01{
